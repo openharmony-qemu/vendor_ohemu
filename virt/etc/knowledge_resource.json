@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "path": "/system/etc/knowledge-content/holidays.ics",
+  "format": "bounded_all_day_ICS_subset",
+  "optional": true,
+  "asset_sha256": "12798eab4471df83e23359ace64cab99228a256763cda188db5ded01ed32dfc9"
+}

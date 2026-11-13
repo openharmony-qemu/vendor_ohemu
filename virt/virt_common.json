@@ -8,7 +8,11 @@
           "component": "graphic_2d",
           "features": [
             "graphic_2d_feature_rs_enable_eglimage = true",
-            "graphic_2d_feature_use_texgine = true"
+            "graphic_2d_feature_use_texgine = true",
+            "graphic_2d_feature_ace_enable_gpu = true",
+            "graphic_2d_feature_enable_opengl = true",
+            "graphic_2d_feature_enable_vulkan = false",
+            "graphic_2d_feature_parallel_render_enable = true"
           ]
         },
         {
@@ -157,6 +161,7 @@
         {
           "component": "drivers_peripheral_camera",
           "features": [
+            "drivers_peripheral_camera_v4l2_emulator=false",
             "drivers_peripheral_camera_feature_usb = false"
           ]
         },
@@ -222,6 +227,10 @@
     {
       "subsystem": "thirdparty",
       "components": [
+        {
+          "component": "alsa-lib",
+          "features": []
+        },
         {
           "component": "libuv",
           "features": [

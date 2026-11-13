@@ -1,0 +1,224 @@
+{
+  "subsystems": [
+    {
+      "subsystem": "ai",
+      "components": [
+        {
+          "component": "intelligent_voice_framework",
+          "features": [
+            "intelligent_voice_framework_engine_enable = true",
+            "intelligent_voice_framework_only_first_stage = false",
+            "intelligent_voice_framework_only_second_stage = false",
+            "intelligent_voice_framework_qemu_cpu_provider = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "communication",
+      "components": [
+        {
+          "component": "netmanager_base",
+          "features": [
+            "netmanager_base_enable_feature_net_firewall = false",
+            "netmanager_base_enable_feature_sysvpn = true"
+          ]
+        },
+        {
+          "component": "netmanager_ext",
+          "features": [
+            "netmanager_ext_feature_net_firewall = false",
+            "netmanager_ext_feature_sysvpn = true"
+          ],
+          "syscap": [
+            "SystemCapability.Communication.NetManager.NetFirewall = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "filemanagement",
+      "components": [
+        {
+          "component": "file_api",
+          "features": [],
+          "syscap": [
+            "SystemCapability.FileManagement.File.Environment.FolderObtain = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "graphic",
+      "components": [
+        {
+          "component": "graphic_2d",
+          "features": [
+            "graphic_2d_feature_rs_enable_eglimage = true",
+            "graphic_2d_feature_use_texgine = true",
+            "graphic_2d_feature_ace_enable_gpu = true",
+            "graphic_2d_feature_enable_opengl = true",
+            "graphic_2d_feature_enable_vulkan = false",
+            "graphic_2d_feature_parallel_render_enable = true",
+            "graphic_2d_feature_rs_enable_uni_render = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "hdf",
+      "components": [
+        {
+          "component": "drivers_peripheral_camera",
+          "features": [
+            "drivers_peripheral_camera_feature_usb = true",
+            "drivers_peripheral_camera_qemu_vivid_capture = true",
+            "drivers_peripheral_camera_use_commom_usb_camera_host_config = true",
+            "drivers_peripheral_camera_v4l2_emulator = false"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_intelligent_voice",
+          "features": [
+            "drivers_peripheral_intelligent_voice_engine_enable = true",
+            "drivers_peripheral_intelligent_voice_qemu_cpu_provider = true"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_sensor",
+          "features": [
+            "drivers_peripheral_sensor_feature_model = true",
+            "drivers_peripheral_sensor_feature_community = true",
+            "drivers_peripheral_sensor_feature_qemu_external = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "msdp",
+      "components": [
+        {
+          "component": "device_status",
+          "features": [
+            "device_status_allow_mock_fallback = false",
+            "device_status_interaction_coordination = true",
+            "device_status_sensor_enable = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "audio_framework",
+          "features": [
+            "audio_framework_feature_dtmf_tone = true",
+            "audio_framework_feature_opensl_es = true",
+            "audio_framework_feature_support_os_account = false",
+            "audio_framework_feature_audiosuite_format_convert_support = true",
+            "audio_framework_feature_audiosuite_support = true",
+            "audio_framework_qemu_cpu_spatial = true"
+          ],
+          "syscap": [
+            "SystemCapability.Multimedia.Audio.SuiteEngine = true"
+          ]
+        },
+        {
+          "component": "av_session",
+          "features": [
+            "av_session_enable_input_redistribute = true"
+          ],
+          "syscap": [
+            "SystemCapability.Multimedia.AVSession.AVInputCast = true"
+          ]
+        },
+        {
+          "component": "media_foundation",
+          "features": [],
+          "syscap": [
+            "SystemCapability.Multimedia.VideoProcessingEngine = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "print",
+      "components": [
+        {
+          "component": "print_fwk",
+          "features": [],
+          "syscap": [
+            "SystemCapability.Print.PrintFramework = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "systemabilitymgr",
+      "components": [
+        {
+          "component": "selectionfwk",
+          "features": [],
+          "syscap": [
+            "SystemCapability.SelectionInput.Selection = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "telephony",
+      "components": [
+        {
+          "component": "call_manager",
+          "features": [
+            "call_manager_feature_support_rtt = true"
+          ]
+        },
+        {
+          "component": "cellular_call",
+          "features": [
+            "cellular_call_support_rtt = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "thirdparty",
+      "components": [
+        {
+          "component": "alsa-lib",
+          "features": [
+            "alsa_lib_feature_config_enable = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "usb",
+      "components": [
+        {
+          "component": "usb_manager",
+          "features": [],
+          "syscap": [
+            "SystemCapability.USB.USBManager.Serial = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "window",
+      "components": [
+        {
+          "component": "window_manager",
+          "features": [
+            "window_manager_use_sceneboard = true"
+          ],
+          "syscap": [
+            "SystemCapability.Window.SessionManager = true"
+          ]
+        }
+      ]
+    }
+  ]
+}

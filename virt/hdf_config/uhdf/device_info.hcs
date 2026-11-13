@@ -41,6 +41,22 @@
                 }
             }
         }
+        ril :: host {
+            hostName = "riladapter_host";
+            priority = 50;
+            uid = "radio";
+            gid = ["radio", "uhdf_driver", "log"];
+            caps = ["NET_ADMIN"];
+            ril_device :: device {
+                device0 :: deviceNode {
+                    policy = 2;
+                    priority = 100;
+                    preload = 0;
+                    moduleName = "libril_driver.z.so";
+                    serviceName = "ril_service";
+                }
+            }
+        }
         bluetooth :: host {
             hostName = "blue_host";
             priority = 50;

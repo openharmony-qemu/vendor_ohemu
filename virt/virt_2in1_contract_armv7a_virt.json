@@ -1,0 +1,166 @@
+{
+  "subsystems": [
+    {
+      "subsystem": "ai",
+      "components": [
+        {
+          "component": "intelligent_voice_framework",
+          "features": [
+            "intelligent_voice_framework_engine_enable = true",
+            "intelligent_voice_framework_only_first_stage = false",
+            "intelligent_voice_framework_only_second_stage = false",
+            "intelligent_voice_framework_qemu_cpu_provider = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "communication",
+      "components": [
+        {
+          "component": "netmanager_base",
+          "features": [
+            "netmanager_base_enable_feature_net_firewall = true",
+            "netmanager_base_enable_feature_sysvpn = true"
+          ]
+        },
+        {
+          "component": "netmanager_ext",
+          "features": [
+            "netmanager_ext_feature_net_firewall = true",
+            "netmanager_ext_feature_sysvpn = true"
+          ],
+          "syscap": [
+            "SystemCapability.Communication.NetManager.Eap = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "distributeddatamgr",
+      "components": [
+        {
+          "component": "relational_store",
+          "features": [],
+          "syscap": [
+            "SystemCapability.DistributedDataManager.CloudSync.Client = false",
+            "SystemCapability.DistributedDataManager.CloudSync.Config = false",
+            "SystemCapability.DistributedDataManager.CloudSync.Server = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "filemanagement",
+      "components": [
+        {
+          "component": "dfs_service",
+          "features": [],
+          "syscap": [
+            "SystemCapability.FileManagement.DistributedFileService.CloudSync.Core = false",
+            "SystemCapability.FileManagement.DistributedFileService.CloudSyncManager = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "graphic",
+      "components": [
+        {
+          "component": "graphic_2d",
+          "features": [
+            "graphic_2d_feature_rs_enable_eglimage = true",
+            "graphic_2d_feature_ace_enable_gpu = true",
+            "graphic_2d_feature_enable_opengl = true",
+            "graphic_2d_feature_enable_vulkan = false",
+            "graphic_2d_feature_parallel_render_enable = true",
+            "graphic_2d_feature_use_texgine = true",
+            "graphic_2d_feature_rs_enable_uni_render = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "hdf",
+      "components": [
+        {
+          "component": "drivers_peripheral_camera",
+          "features": [
+            "drivers_peripheral_camera_feature_usb = false",
+            "drivers_peripheral_camera_v4l2_emulator = false"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_intelligent_voice",
+          "features": [
+            "drivers_peripheral_intelligent_voice_engine_enable = true",
+            "drivers_peripheral_intelligent_voice_qemu_cpu_provider = true"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_sensor",
+          "features": [
+            "drivers_peripheral_sensor_feature_model = true",
+            "drivers_peripheral_sensor_feature_community = true",
+            "drivers_peripheral_sensor_feature_qemu_external = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "msdp",
+      "components": [
+        {
+          "component": "device_status",
+          "features": [
+            "device_status_allow_mock_fallback = false",
+            "device_status_interaction_coordination = true",
+            "device_status_sensor_enable = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "audio_framework",
+          "features": [
+            "audio_framework_feature_dtmf_tone = true",
+            "audio_framework_feature_opensl_es = true",
+            "audio_framework_feature_support_os_account = false",
+            "audio_framework_qemu_cpu_spatial = true"
+          ],
+          "syscap": [
+            "SystemCapability.Multimedia.Audio.DeviceEnhance = true"
+          ]
+        },
+        {
+          "component": "camera_framework",
+          "features": [],
+          "syscap": [
+            "SystemCapability.Multimedia.Camera.Core = false"
+          ]
+        },
+        {
+          "component": "media_foundation",
+          "features": [],
+          "syscap": [
+            "SystemCapability.Multimedia.VideoProcessingEngine = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "thirdparty",
+      "components": [
+        {
+          "component": "alsa-lib",
+          "features": [
+            "alsa_lib_feature_config_enable = true"
+          ]
+        }
+      ]
+    }
+  ]
+}

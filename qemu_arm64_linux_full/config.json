@@ -12,12 +12,26 @@
   "ext_sanitizer_check_list_path": "vendor/ohemu/virt/security_config/sanitizer_check_list.gni",
   "build_selinux": true,
   "build_seccomp": true,
-  "inherit": [ 
-     "productdefine/common/inherit/rich.json",
-     "productdefine/common/inherit/chipset_common.json",
-     "vendor/ohemu/virt/virt_common.json"
-   ],
+  "inherit": [
+    "productdefine/common/inherit/rich.json",
+    "vendor/ohemu/virt/virt_phone_full.json",
+    "productdefine/common/inherit/chipset_common.json",
+    "vendor/ohemu/virt/virt_common.json",
+    "vendor/ohemu/virt/virt_phone_contract_arm64_virt.json"
+  ],
   "subsystems": [
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "media_library",
+          "features": [
+            "media_library_feature_qemu_standard_functionfs=true",
+            "media_library_feature_mtp=true"
+          ]
+        }
+      ]
+    },
     {
       "subsystem": "thirdparty",
       "components": [
@@ -35,10 +49,6 @@
         },
         {
           "component": "expat",
-          "features": []
-        },
-        {
-          "component": "alsa-lib",
           "features": []
         },
         {
@@ -81,6 +91,10 @@
           "features": [
             "ets_runtime_feature_enable_static_backtrace = false"
           ]
+        },
+        {
+          "component": "jsvm",
+          "features": []
         }
       ]
     },
@@ -101,6 +115,12 @@
       "subsystem": "hdf",
       "components": [
         {
+          "component": "drivers_peripheral_usb",
+          "features": [
+            "drivers_peripheral_usb_feature_qemu_standard_functionfs=true"
+          ]
+        },
+        {
           "component": "drivers_tools",
           "features": []
         },
@@ -113,12 +133,10 @@
           "features": []
         },
         {
-          "component": "drivers_peripheral_camera",
-          "features": [ "drivers_peripheral_camera_v4l2_emulator=false" ]
-        },
-        {
           "component": "drivers_peripheral_display",
-          "features": [ "drivers_peripheral_display_bootstrap_hotplug=true" ]
+          "features": [
+            "drivers_peripheral_display_bootstrap_hotplug=true"
+          ]
         }
       ]
     },
@@ -136,7 +154,9 @@
       "components": [
         {
           "component": "selinux_adapter",
-          "features": [ "selinux_adapter_enforce=false" ]
+          "features": [
+            "selinux_adapter_enforce=false"
+          ]
         }
       ]
     }

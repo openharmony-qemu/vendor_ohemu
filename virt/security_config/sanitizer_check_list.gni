@@ -605,6 +605,7 @@ bypass_algorithm = []
 
 # window_manager : //foundation/window/window_manager
 bypass_window_manager = [
+  "dm_unittest_common_lite",  # test-only target without CFI settings
   "setresolution_screen",  #cfi not configured
   "libsetresolution_util",  #cfi not configured
   "libwmutil",  #cfi not configured

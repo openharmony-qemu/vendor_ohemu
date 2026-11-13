@@ -3,7 +3,10 @@
         {
             "name": "primary",
             "cardId": 0,
-            "cardName": "AudioPCI"
+            "cardName": "AudioPCI",
+            "captureCardId": 1,
+            "captureCardName": "QemuCapture",
+            "captureDevice": 0
         }
     ]
 }

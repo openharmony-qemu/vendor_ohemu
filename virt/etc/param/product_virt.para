@@ -13,3 +13,13 @@
 
 const.product.brand=default
 const.build.product=default
+
+
+# Native-bound Settings select provider
+const.system.sharePicker.bundleName=com.ohos.settings
+const.system.sharePicker.abilityName=PickerDialog
+const.window.multiWindowUIType=HandsetSmartWindow
+persist.sceneboard.ispcmode=false
+
+# QEMU full device-profile compatibility for current system HAPs.
+const.bms.supportAppTypes=2in1,phone,default,tablet

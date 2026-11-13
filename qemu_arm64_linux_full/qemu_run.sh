@@ -133,6 +133,8 @@ QEMU_CMD="${SUDO} qemu-system-aarch64 ${ACCEL_ARGS} \
 -m 4096 \
 -kernel ${OHOS_IMG}/Image \
 -initrd ${OHOS_IMG}/ramdisk.img \
+-audiodev none,id=ohos_audio \
+-device es1370,audiodev=ohos_audio \
 ${DISPLAY_ARGS} \
 -device virtio-mouse-pci \
 -device virtio-keyboard-pci \

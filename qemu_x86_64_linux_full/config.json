@@ -19,6 +19,18 @@
   ],
   "subsystems": [
     {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "media_library",
+          "features": [
+            "media_library_feature_qemu_standard_functionfs=true",
+            "media_library_feature_mtp=true"
+          ]
+        }
+      ]
+    },
+    {
       "subsystem": "thirdparty",
       "components": [
         {
@@ -35,10 +47,6 @@
         },
         {
           "component": "expat",
-          "features": []
-        },
-        {
-          "component": "alsa-lib",
           "features": []
         },
         {
@@ -87,6 +95,10 @@
           "features": [
             "runtime_core_enable_codegen = false"
           ]
+        },
+        {
+          "component": "jsvm",
+          "features": []
         }
       ]
     },
@@ -107,6 +119,12 @@
       "subsystem": "hdf",
       "components": [
         {
+          "component": "drivers_peripheral_usb",
+          "features": [
+            "drivers_peripheral_usb_feature_qemu_standard_functionfs=true"
+          ]
+        },
+        {
           "component": "drivers_tools",
           "features": []
         },
@@ -119,12 +137,10 @@
           "features": []
         },
         {
-          "component": "drivers_peripheral_camera",
-          "features": [ "drivers_peripheral_camera_v4l2_emulator=false" ]
-        },
-        {
           "component": "drivers_peripheral_display",
-          "features": [ "drivers_peripheral_display_bootstrap_hotplug=true" ]
+          "features": [
+            "drivers_peripheral_display_bootstrap_hotplug=true"
+          ]
         }
       ]
     },

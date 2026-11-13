@@ -66,6 +66,8 @@ exec qemu-system-x86_64 \
     -m 4096 \
     -kernel "${OHOS_IMG}/bzImage" \
     -initrd "${OHOS_IMG}/ramdisk.img" \
+    -audiodev none,id=ohos_audio \
+    -device es1370,audiodev=ohos_audio \
     "${DISPLAY_ARGS[@]}" \
     -device virtio-mouse-pci \
     -device virtio-keyboard-pci \
